@@ -1,0 +1,7 @@
+{
+    "private_key": "docker_key",
+    "port": 2022,
+    "user": "sshuser",
+    "ip": "localhost",
+    "password": ""
+}
