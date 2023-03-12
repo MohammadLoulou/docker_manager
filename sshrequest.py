@@ -1,13 +1,20 @@
 import datafetcher
 import paramiko
+from commandgrabber import CommandGrabber
 
 
 class SshRequest:
     def main(self):
 
         fetcher = datafetcher.DataFetcher()
-        dict = fetcher.getJson("config.json")
-
+        grabber = CommandGrabber()
+        dict = fetcher.getJson(
+            "/home/adam/Documents/Docker_management/docker_manager/config.json"
+        )
+        cmd = ""
+        print("Type exit to quit")
+        while cmd != "exit":
+            cmd = input("Type a command : ")
         for container in dict:
 
             hostname = container["ip"]
@@ -18,15 +25,15 @@ class SshRequest:
                 container["private_key"]
             )
 
-            cmd = "touch battikh.txt"
 
             with paramiko.SSHClient() as client:
 
                 client.load_system_host_keys()
-                client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+                #client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
                 client.connect(hostname, port, username, password, pkey=private_key)
-
                 (stdin, stdout, stderr) = client.exec_command(cmd)
-
                 output = stdout.read()
+                output_sent = output.decode("utf-8")
+                grabber.send_commands("cmds_list.txt", cmd, output_sent)
+
                 print(str(output, "utf8"))
