@@ -4,7 +4,29 @@ from commandgrabber import CommandGrabber
 
 
 class SshRequest:
+    """
+    A class for executing commands on remote Docker containers via SSH.
+
+    Attributes:
+        None.
+
+    Methods:
+        main(): Executes commands on remote Docker containers using SSH connection.
+    """
+
     def main(self):
+        """
+        Executes commands on remote Docker containers using SSH connection.
+
+        This method establishes an SSH connection with a Docker container, retrieves the command to execute from the user,
+        and then executes the command on the remote container. The output of the command is also saved to a file.
+
+        Args:
+            self: The object instance.
+
+        Returns:
+            None.
+        """
 
         fetcher = datafetcher.DataFetcher()
         grabber = CommandGrabber()
@@ -25,11 +47,10 @@ class SshRequest:
                 container["private_key"]
             )
 
-
             with paramiko.SSHClient() as client:
 
                 client.load_system_host_keys()
-                #client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+                # client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
                 client.connect(hostname, port, username, password, pkey=private_key)
                 (stdin, stdout, stderr) = client.exec_command(cmd)
                 output = stdout.read()
