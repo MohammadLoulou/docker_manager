@@ -1,0 +1,15 @@
+touch toto.txt
+touch toto.txt
+touch lvlberblu.txt
+touch dciuher.txt
+touch erfgeruuisuhi.txt
+touch erfgeruuisuhi.txt
+touch totobattikh.txt
+touch totobattikh.txt
+change park
+change park
+touch deuxiemeessaie.txt
+exit
+exit
+exit
+touch papappapapapa.txt
