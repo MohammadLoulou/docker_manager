@@ -3,7 +3,6 @@ class CommandGrabber:
         pass
 
     def send_commands(self, filename, input, output):
-        with open(filename, "w") as file:
-            file.write(input)
-            file.write("\n")
-            file.write(str(output))
+        with open(filename, "a") as file:
+            file.write(input + "\n")
+            file.write(output)
