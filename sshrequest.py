@@ -8,20 +8,25 @@ class SshRequest:
         fetcher = datafetcher.DataFetcher()
         dict = fetcher.getJson("config.json")
 
-        hostname = dict["ip"]
-        port = dict["port"]
-        username = dict["user"]
-        password = dict["password"]
-        private_key = paramiko.Ed25519Key.from_private_key_file(dict["private_key"])
+        for container in dict:
 
-        cmd = "uname"
+            hostname = container["ip"]
+            port = container["port"]
+            username = container["user"]
+            password = container["password"]
+            private_key = paramiko.Ed25519Key.from_private_key_file(
+                container["private_key"]
+            )
 
-        with paramiko.SSHClient() as client:
+            cmd = "touch battikh.txt"
 
-            client.load_system_host_keys()
-            client.connect(hostname, port, username, password, pkey=private_key)
+            with paramiko.SSHClient() as client:
 
-            (stdin, stdout, stderr) = client.exec_command(cmd)
+                client.load_system_host_keys()
+                client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+                client.connect(hostname, port, username, password, pkey=private_key)
 
-            output = stdout.read()
-            print(str(output, "utf8"))
+                (stdin, stdout, stderr) = client.exec_command(cmd)
+
+                output = stdout.read()
+                print(str(output, "utf8"))
