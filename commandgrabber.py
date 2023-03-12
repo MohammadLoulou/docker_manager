@@ -32,11 +32,3 @@ class CommandGrabber:
         with open(filename, "a") as file:
             file.write(input + "\n")
             file.write(output)
-
-
-class CommandGrabber:
-    def send_commands(self, filename, input, output):
-
-        with open(filename, "a") as file:
-            file.write(input + "\n")
-            file.write(output)

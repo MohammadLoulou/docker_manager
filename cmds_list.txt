@@ -1,0 +1,30 @@
+touch toto.txt
+touch toto.txt
+touch toto.txt
+exit
+exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+touch toton.txt
+touch toton.txt
+change_park
+change_park
+touch chdbchidb.txt
+touch chdbchidb.txt

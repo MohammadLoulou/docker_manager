@@ -4,13 +4,21 @@
         "port": 2022,
         "user": "sshuser",
         "ip": "localhost",
-        "password": ""
+        "password": "",
+        "parks": [
+            "1",
+            "2"
+        ]
     },
     {
         "private_key": "docker_key2",
         "port": 2023,
         "user": "sshuser2",
         "ip": "localhost",
-        "password": ""
+        "password": "",
+        "parks": [
+            "2",
+            "1"
+        ]
     }
 ]
