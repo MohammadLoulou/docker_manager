@@ -1,5 +1,6 @@
 touch toto.txt
 touch toto.txt
+<<<<<<< HEAD
 touch lvlberblu.txt
 touch dciuher.txt
 touch erfgeruuisuhi.txt
@@ -13,3 +14,33 @@ exit
 exit
 exit
 touch papappapapapa.txt
+=======
+touch toto.txt
+exit
+exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+touch toton.txt
+touch toton.txt
+change_park
+change_park
+touch chdbchidb.txt
+touch chdbchidb.txt
+>>>>>>> 953561a8152ed9a4f4644976fa1a0e166abec051
