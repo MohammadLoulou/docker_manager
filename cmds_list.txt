@@ -1,20 +1,5 @@
 touch toto.txt
 touch toto.txt
-<<<<<<< HEAD
-touch lvlberblu.txt
-touch dciuher.txt
-touch erfgeruuisuhi.txt
-touch erfgeruuisuhi.txt
-touch totobattikh.txt
-touch totobattikh.txt
-change park
-change park
-touch deuxiemeessaie.txt
-exit
-exit
-exit
-touch papappapapapa.txt
-=======
 touch toto.txt
 exit
 exit
@@ -23,24 +8,85 @@ exit
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 touch toton.txt
 touch toton.txt
 change_park
 change_park
 touch chdbchidb.txt
 touch chdbchidb.txt
->>>>>>> 953561a8152ed9a4f4644976fa1a0e166abec051
+touch testessai.txt
+touch testessai.txt
+touch testessai2.txt
+touch testessai2.txt
+echo "hello"
+hello
+echo "hello"
+hello
+exit
+exit
+touch tata.txt
+touch tata.txt
+echo "aa"
+aa
+echo "aa"
+aa
+exit
+exit
+touch battikh.txt
+touch battikh.txt
+touch oezpihzeui.txt
+touch oezpihzeui.txt
+touch jerjbfr.txt
+touch jerjbfr.txt
+echo "hello"
+hello
+echo "hello"
+hello
+exit
+exit
+touch ducybzu.txt
+touch ducybzu.txt
+touch ciuveriuhip.txt
+touch ciuveriuhip.txt
+echo"iverbve"
+echo"iverbve"
+echo "kerjvb"
+kerjvb
+echo "kerjvb"
+kerjvb
+exit
+exit
+touch refofiyuebfui.txt
+touch refofiyuebfui.txt
+exit
+exit
+touch zefhheruoi.txt
+touch zefhheruoi.txt
+touch iusuieur.txt
+touch iusuieur.txt
+echo "fdliuev"
+fdliuev
+echo "fdliuev"
+fdliuev
+exit
+exit
+touch douvhyberyuovg.txt
+touch douvhyberyuovg.txt
+touch ziyuoerc.txt
+touch ziyuoerc.txt
+exit
+exit
+touch dumnpui.txt
+touch dumnpui.txt
+echo "fijiv"
+fijiv
+echo "fijiv"
+fijiv
+exit
+exit
+touch
+touch
+touch
+touch
+exit
+exit

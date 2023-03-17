@@ -17,10 +17,7 @@
         "ip": "localhost",
         "password": "",
         "parks": [
-<<<<<<< HEAD
-=======
             "2",
->>>>>>> 953561a8152ed9a4f4644976fa1a0e166abec051
             "1"
         ]
     }

@@ -1,6 +1,8 @@
 import datafetcher
 import paramiko
 from commandgrabber import CommandGrabber
+import pandas as pd
+import json
 
 
 class SshRequest:
@@ -31,45 +33,25 @@ class SshRequest:
         fetcher = datafetcher.DataFetcher()
         grabber = CommandGrabber()
         dict = fetcher.getJson("config.json")
-<<<<<<< HEAD
-        park = input("chose a park of containers\n")
-=======
->>>>>>> 953561a8152ed9a4f4644976fa1a0e166abec051
+        with open("commandes.json", "w") as f:
+            f.write("{}")
+        data = json.load(open("commandes.json", "r"))
+
+        df = pd.json_normalize(data)
+        df = pd.read_json("commandes.json")
         cmd = ""
         cmd_park = input("Type exit to quit, what park do you want to select? ")
         while cmd != "exit":
             cmd = input("Type a command : ")
-<<<<<<< HEAD
-            if cmd == "change park":
-                park = input("chose a park of containers\n")
-                continue
-            for container in dict:
-                if park in container["parks"]:
 
-                    hostname = container["ip"]
-                    port = container["port"]
-                    username = container["user"]
-                    password = container["password"]
-                    private_key = paramiko.Ed25519Key.from_private_key_file(
-                        container["private_key"]
-                    )
-
-                    with paramiko.SSHClient() as client:
-
-                        client.load_system_host_keys()
-                        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-                        client.connect(
-                            hostname, port, username, password, pkey=private_key
-                        )
-                        (stdin, stdout, stderr) = client.exec_command(cmd)
-                        output = stdout.read()
-                        output_sent = output.decode("utf-8")
-                        grabber.send_commands("cmds_list.txt", cmd, output_sent)
-
-=======
             if cmd == "change_park":
                 cmd_park = input("Type a command ")
                 continue
+            commande = cmd.split(" ")[0]
+            if commande in df:
+                df[commande] += [1]
+            else:
+                df[commande] = [1]
             for container in dict:
                 if cmd_park in container["parks"]:
                     hostname = container["ip"]
@@ -91,6 +73,7 @@ class SshRequest:
                         output_sent = output.decode("utf-8")
                         grabber.send_commands("cmds_list.txt", cmd, output_sent)
 
->>>>>>> 953561a8152ed9a4f4644976fa1a0e166abec051
                         print(str(output, "utf8"))
+        df = df.squeeze()
+        df.to_json("commandes.json")
         return
