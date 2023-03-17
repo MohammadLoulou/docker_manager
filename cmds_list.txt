@@ -5,26 +5,220 @@ exit
 exit
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 touch toton.txt
 touch toton.txt
 change_park
 change_park
 touch chdbchidb.txt
 touch chdbchidb.txt
+touch dubebw.txt
+touch dubebw.txt
+touch hecbhyeb.txt
+touch hecbhyeb.txt
+exit
+exit
+touch hiebcu.txt
+touch hiebcu.txt
+touch ecnec.txt
+touch ecnec.txt
+touch ihebcihbi.txt
+touch rejvbceidr.txt
+touch rejvbceidr.txt
+touch eucbed.txt
+touch eucbed.txt
+touch eicbeibc.txt
+touch eicbeibc.txt
+echo "heloo"
+heloo
+echo "heloo"
+heloo
+exit
+exit
+touch ecbbeub.txt
+touch ecbbeub.txt
+touch idcbied.txt
+touch idcbied.txt
+exho 'hello'
+exho 'hello'
+exit
+exit
+touch deiuncu.txt
+touch deiuncu.txt
+touch ecbeyb.txt
+touch ecbeyb.txt
+echo 'helloo'
+helloo
+echo 'helloo'
+helloo
+exit
+exit
+touch ucudc.txt
+touch ucudc.txt
+touch tcihebc.txt
+touch tcihebc.txt
+touch ecbeçucb.txt
+touch ecbeçucb.txt
+echo 'ueceuo'
+ueceuo
+echo 'ueceuo'
+ueceuo
+caca
+caca
+exit
+exit
+touch ceubcne.txt
+touch ceubcne.txt
+touch iecbeybc.txt
+touch iecbeybc.txt
+touch ye_cye.txt
+touch ye_cye.txt
+echo 'uchuch'
+uchuch
+echo 'uchuch'
+uchuch
+tarlouze  vrb
+tarlouze  vrb
+exit
+exit
+touch iecnb.txt
+touch iecnb.txt
+touch heycbe.txt
+touch heycbe.txt
+exit
+exit
+touch eihcihe.txt
+touch eihcihe.txt
+touch eucbe.txt
+touch eucbe.txt
+echo 'hello'
+hello
+echo 'hello'
+hello
+exit
+exit
+touch cebc.txt
+touch cebc.txt
+touch eucb.txt
+touch eucb.txt
+echo 'heulld'
+heulld
+echo 'heulld'
+heulld
+exit
+exit
+toucn uecb.txt
+toucn uecb.txt
+exit
+exit
+touch eych.txt
+touch eych.txt
+touch euhce.txt
+touch euhce.txt
+exit
+exit
+touch ciebc.txt
+touch ciebc.txt
+touch ceub.txt
+touch ceub.txt
+echo 'hche'
+hche
+echo 'hche'
+hche
+exit
+exit
+touch oerjcne.txt
+touch oerjcne.txt
+touch ecbe.txt
+touch ecbe.txt
+echo 'uehu'
+uehu
+echo 'uehu'
+uehu
+exit
+exit
+touch eocn.txt
+touch eocn.txt
+touch eucb.txt
+touch eucb.txt
+echo 'cih'
+cih
+echo 'cih'
+cih
+exit
+exit
+touch  ceubec.txt
+touch  ceubec.txt
+touch eucb.txt
+touch eucb.txt
+echo 'ur"h"
+echo 'ur"h"
+exit
+exit
+touch eud.txt
+touch eud.txt
+touch
+touch
+echo
+
+echo
+
+toto
+toto
+exit
+exit
+touch
+touch
+touch
+touch
+eecho
+eecho
+pd 
+pd 
+exit
+exit
+touch
+touch
+touch
+touch
+touch
+touch
+toto
+toto
+echo
+
+echo
+
+exit
+exit
+touch
+touch
+touch
+touch
+echo
+
+echo
+
+run
+run
+exit
+exit
+touch 
+touch 
+echo
+
+echo
+
+touch
+touch
+battikh
+battikh
+exit
+exit
+touch
+touch
+echo
+
+echo
+
+exit
+exit
