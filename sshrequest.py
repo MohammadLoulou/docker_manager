@@ -4,7 +4,6 @@ from commandgrabber import CommandGrabber
 import pandas as pd
 from handlejson import HandleJson
 import matplotlib.pyplot as plt
-import pandas as pd
 import json
 
 
@@ -37,25 +36,25 @@ class SshRequest:
         grabber = CommandGrabber()
         handle = HandleJson()
         dict = fetcher.getJson("config.json")
-        columns = []
+
         cmd = ""
-        cmd_park = input("Type exit to quit, what park do you want to select? ")
-        handle.create_json("commandes.json")
-
-        df = handle.get_json_data_to_dataframe("commandes.json")
-
-        # df = pd.read_json("commandes.json")
+        park_num = input("what park do you want to select? ")
 
         while cmd != "exit":
-            cmd = input("Type a command : ")
+
+            cmd = input("Type exit to quit,Type a command : ")
 
             if cmd == "change_park":
-                cmd_park = input("Type a command ")
+                park_num = input("what park do you want to select?")
                 continue
-            columns.append(cmd)
-            handle.add_to_dataframe(df, cmd)
+            columns = [cmd]
+
             for container in dict:
-                if cmd_park in container["parks"]:
+                json_name = container["container_name"] + ".json"
+                handle.open_json(json_name)
+                df = handle.json_data_to_dataframe(json_name)
+                if park_num in container["parks"]:
+                    handle.add_to_dataframe(df, cmd)
                     hostname = container["ip"]
                     port = container["port"]
                     username = container["user"]
@@ -63,6 +62,7 @@ class SshRequest:
                     private_key = paramiko.Ed25519Key.from_private_key_file(
                         container["private_key"]
                     )
+
                     with paramiko.SSHClient() as client:
 
                         client.load_system_host_keys()
@@ -74,13 +74,12 @@ class SshRequest:
                         output = stdout.read()
                         output_sent = output.decode("utf-8")
                         grabber.send_commands("cmds_list.txt", cmd, output_sent)
-
-                        print(str(output, "utf8"))  # type: ignore
+                        handle.df_to_json(df, json_name)
+                        print(str(output, "utf8"))
         # plot = df.plot.pie()
-        plot_data = df[columns]
-        plot = plot_data.sum().plot(subplots=True, kind="pie")
-        plt.legend(columns)
-        # plot = df.plot(kind="pie", y=cmd)
-        plt.show()
-        handle.df_to_json(df, "commanded.json")
+        for container in dict:
+            data = json.load(open(container["container_name"] + ".json"))
+            plt.pie(data.values(), labels=data.keys())
+            plt.savefig(container["container_name"])
+
         return

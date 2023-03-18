@@ -1,5 +1,6 @@
 [
     {
+        "container_name": "conteneur_1",
         "private_key": "docker_key",
         "port": 2022,
         "user": "sshuser",
@@ -11,6 +12,7 @@
         ]
     },
     {
+        "container_name": "conteneur_2",
         "private_key": "docker_key2",
         "port": 2023,
         "user": "sshuser2",

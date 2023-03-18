@@ -1,14 +1,19 @@
 import json
 import pandas as pd
+from os import path
 
 
 class HandleJson:
-    def create_json(self, filename):
-        with open(filename, "w") as file:
-            file.write("{}")
+    def open_json(self, filename):
+        exists = False
+        if path.exists(filename):
+            exists = True
+        with open(filename, "a") as file:
+            if exists == False:
+                file.write("{}")
         file.close()
 
-    def get_json_data_to_dataframe(self, filename):
+    def json_data_to_dataframe(self, filename):
         """
         Reads a JSON file from the "data_samples" directory, normalizes it using pandas,
         and returns the resulting dataframe.
@@ -29,4 +34,8 @@ class HandleJson:
             df[cmd] = 1
 
     def df_to_json(self, df, filename):
-        df.to_json(filename, orient="records")
+        if isinstance(df.squeeze(), pd.Series):
+            df = df.squeeze()
+        else:
+            df = pd.Series(df.iloc[0])
+        df.to_json(filename)
