@@ -1,0 +1,14 @@
+{
+    "colors": [
+        "olivedrab",
+        "rosybrown",
+        "gray",
+        "saddlebrown"
+    ],
+    "hatch": [
+        "*O",
+        "oO",
+        "O.O",
+        ".||."
+    ]
+}

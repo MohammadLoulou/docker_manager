@@ -1,0 +1,26 @@
+[
+    {
+        "container_name": "conteneur_1",
+        "private_key": "docker_key",
+        "port": 2022,
+        "user": "sshuser",
+        "ip": "localhost",
+        "password": "",
+        "parks": [
+            "1",
+            "2"
+        ]
+    },
+    {
+        "container_name": "conteneur_2",
+        "private_key": "docker_key2",
+        "port": 2023,
+        "user": "sshuser2",
+        "ip": "localhost",
+        "password": "",
+        "parks": [
+            "2",
+            "1"
+        ]
+    }
+]

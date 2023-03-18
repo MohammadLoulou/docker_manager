@@ -35,7 +35,8 @@ class SshRequest:
         fetcher = datafetcher.DataFetcher()
         grabber = CommandGrabber()
         handle = HandleJson()
-        dict = fetcher.getJson("config.json")
+        dict = fetcher.getJson("connection_config.json")
+        pie_config = fetcher.getJson("pie_config.json")
 
         cmd = ""
         park_num = input("what park do you want to select? ")
@@ -79,7 +80,8 @@ class SshRequest:
         # plot = df.plot.pie()
         for container in dict:
             data = json.load(open(container["container_name"] + ".json"))
-            plt.pie(data.values(), labels=data.keys())
+
+            plt.pie(data.values(), labels=data.keys(), **pie_config)
             plt.savefig(container["container_name"])
 
         return
